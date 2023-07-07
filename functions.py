@@ -15,5 +15,5 @@ class AppFunctions(object):
                                         (self.dataFrame['yearOfRegistration'] >= from_year) &
                                         (self.dataFrame['yearOfRegistration'] <= to_year) &
                                         (self.dataFrame['price'] > 0) &
-                                        (self.dataFrame['brand'] < 5000000)]
+                                        (self.dataFrame['price'] < 5000000)]
         return data_slice
