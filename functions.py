@@ -13,5 +13,7 @@ class AppFunctions(object):
     def find_auto(self, brand, from_year, to_year):
         data_slice = self.dataFrame.loc[(self.dataFrame['brand'] == brand) &
                                         (self.dataFrame['yearOfRegistration'] >= from_year) &
-                                        (self.dataFrame['yearOfRegistration'] <= to_year)];
+                                        (self.dataFrame['yearOfRegistration'] <= to_year) &
+                                        (self.dataFrame['price'] > 0) &
+                                        (self.dataFrame['brand'] < 5000000)]
         return data_slice
